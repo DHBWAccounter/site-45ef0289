@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-proxima: 'Proxima Nova', system-ui, sans-serif;
+  --font-garamond: 'Adobe Garamond Pro', Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-proxima);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Typography utilities */
+.text-primary {
+  color: #3D9991;
+}
+
+.bg-primary {
+  background-color: #3D9991;
+}
+
+.hover-text-primary:hover {
+  color: #3D9991;
+}
+
+/* Link hover effect */
+.link-arrow {
+  transition: all 0.2s ease;
+}
+
+.link-arrow:hover {
+  color: #2d7a73;
+}
+
+/* Navigation dropdown animation */
+.subnav {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+}
+
+.folder:hover .subnav {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
